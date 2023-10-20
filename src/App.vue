@@ -4,8 +4,8 @@
 </script> -->
 <template>
   <h1>This is my first project</h1>
-  <Button color="red" text="Hi"></Button>
-  <Button text=""></Button>
+  <!-- <Button color="red" text="Hi"></Button> -->
+  <!-- <Button text=""></Button> -->
 
 </template>
 <script>
