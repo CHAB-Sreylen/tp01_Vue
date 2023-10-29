@@ -1,5 +1,5 @@
 <template>
-    <button :style="{}" v-text="text"></button>
+    <button :style="{color,icon,text}" v-text="text"></button>
 </template>
 
 <script>

@@ -1,20 +1,6 @@
  import { createRouter, createWebHistory } from 'vue-router'
 
-
- // git init 
- // git add .
- // git status 
- // git clog
- // git commit
- // keyboard i
- // Finish task 1
- // * Remove unused files
- // *update
- // escape
- //:wq = write and quit 
- // git remote add origin 
- //  
-const router = createRouter({
+ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -33,4 +19,4 @@ const router = createRouter({
   ]
 })
 
-export default router
+export default router;
