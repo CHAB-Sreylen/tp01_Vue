@@ -128,23 +128,29 @@ export default {
 </script>
 
 <style>
-.container{
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .container{
+ 
   width: 100%;
   height: 100vh;
   display: flex; 
   flex-direction: column; 
   
-}
+} */
 .Categories{
   display: flex; 
   flex-direction: row;
-  padding:20px;
+ 
 }
 .banner{
-  margin-top: 40px;
+   margin-top: 40px;
   display: flex; 
   flex-direction: row; 
-  margin-left:20px;
 
 }
 
