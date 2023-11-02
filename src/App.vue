@@ -1,6 +1,6 @@
 <template>
-  <div style="display: flex; flex-direction: column; padding: 20px">
-    <div style="display: flex; flex-direction: row; padding: 20px">
+  <div class="container">
+    <div class="Categories">
       <Categories
         v-for="i in Categories"
         :bg="i.bg"
@@ -9,17 +9,22 @@
         :Amount="i.Amount"
       ></Categories>
     </div>
-    <div style="display: flex; flex-direction: row; padding: 20px">
+    <div class="banner">
       <Banner
         v-for="i in Banner"
         :bannerBg="i.bannerBg"
         :Title="i.Title"
         :img="i.img"
+        :btnColor="i.btnBg"
       ></Banner>
+     
     </div>
+    
   </div>
+  <!-- http://127.0.0.1:5500/dist/index.html -->
 </template>
 <script>
+
 import Button from "./components/Button.vue";
 import Categories from "./components/Categories.vue";
 import Banner from "./components/Banner.vue";
@@ -30,6 +35,7 @@ export default {
     Categories,
     Banner,
   },
+
   data() {
     return {
       Categories: [
@@ -99,25 +105,47 @@ export default {
           img: "https://s3-alpha-sig.figma.com/img/de8c/488a/87b9ce16acd7436a6dec758331c840bc?Expires=1699833600&Signature=BopNMeaoYpayx-Epz2eU-MbKTcy37aptwt-6wMUbZ6Mt8k5wuNRsq-yfIYHMpIyAI0hFl6N~P2GQekhYEpysnvQ2tJebN~Omsv8lCoICbXONhWAd9iyfMQqvEjZ-74Eyi9DWiX8JQuclXSCY9zlrzedu2fwO8fJzbWF-zfAk49J9o3oRB3XUz9XXvAhPHQ5x7Eo5uzB9jluL1JzkmMzuYq8LRqBHJxwH3NBB3aoC5JmwL-~A1SfB6DRCUfElZSswO~7bGHfx5Q3zpV5d-t6xlkkc~EXCLGD0vRpoQSHe-8J9WS16pos4WUU-bYexswtrUJZMPcSwvtRGxu4DCUlKaA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
           bannerBg: "rgba(240, 232, 213, 1)",
           Title: "Everyday Fresh & Clean with Our Products",
+          btnBg: "#3BB77E",
         },
         {
           img: "./src/assets/image/Frame1.png",
           bannerBg: "#FFFFFF",
           Title: "Make your Breakfast Healthy and Easy",
+          btnBg: "#3BB77E",
         },
         {
           img: "https://s3-alpha-sig.figma.com/img/4d69/6151/8879bc373bf5fcc1578bcec5172b087b?Expires=1699833600&Signature=Fcyz23Cuci2YfyswiwIYuvnXpqTqeT2BzsUhksKvplJbkgsGcaO0-X1M8nHVl6CDFfd2zHhxeXzTZjzCf45kWe6VcYwcgk3TodKvldeQ~xEuTUcQTvu03EaEqdVQ2c-eTZDcm8Y1uQElWeqsN7zLJng0njznWVkFu0AYde-dYfvJulOW7~CmtPCIZbiSXTzxwsS3t712VhAYvjRwMca1cViLQirep7rcRPdGz-WGUn8NVhD9HUzmf9PtXQoqL8-Oq3hiyxUfQ0meqDc594uZ2MGgnSZ6mfbvaHPxp845r4h7q87NCVXpYa8mku3sAD-2b4B1ME6uFa6nyJgggtEUbA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
           bannerBg: "#E7EAF3",
           Title: "The best Organic Products Online",
+          btnBg: "rgba(253, 192, 64, 1)",
         },
       ],
+     
+     
     };
   },
 };
 </script>
 
 <style>
-body {
-  background-color: black;
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex; 
+  flex-direction: column; 
+  
 }
+.Categories{
+  display: flex; 
+  flex-direction: row;
+  padding:20px;
+}
+.banner{
+  margin-top: 40px;
+  display: flex; 
+  flex-direction: row; 
+  margin-left:20px;
+
+}
+
 </style>
