@@ -21,11 +21,11 @@
       ></Banner>
     </div>
     <Menu :header="menu1.header"></Menu>
-    <div class="AllProduct">
+    <div class="AllProduct flex flex-wrap gap-[10px]">
       <Product></Product>
-      <div class="AllProduct">
-        <AllProduct v-for="i in AllProduct" :pImg="i.pImg" :pbg="i.pbg" :ptype="i.ptype" :pdetail="i.pdetail" ></AllProduct>
-      </div>
+      <!-- <div class="AllProduct flex flex-wrap gap-[10px]"> -->
+        <AllProduct v-for="i in AllProduct" :pimg="i.p_img" :pbg="i.pbg" :ptype="i.ptype" :pdetail="i.pdetail" ></AllProduct>
+      <!-- </div> -->
     </div>
     
   </div>

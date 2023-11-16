@@ -1,20 +1,20 @@
 <template>
   <div
-    class="box w-[298px] h-[402px] bg-white absolute rounded-[10px] border-solid border-2 left-[500px] gap-2"
+    class="box w-[298px] h-[402px] relative bg-white rounded-[10px] border-solid border-2 "
   >
     <div
-      class="pLabel top-[20px] relative w-[58px] h-[32px] rounded-r-[30px] flex justify-center items-center"
+      class="top-[20px] relative w-[58px] h-[32px] rounded-r-[30px] flex justify-center items-center"
       :style="{backgroundColor:pbg}"
     >
       <p class="text-[12px] text-white">{{ ptype }}</p>
     </div>
     <img
-      :src="pImg"
       alt=""
-      class="w-[201px] h-[145px] relative top-[40px] left-[47px] bg-none"
+      class="w-[201px] h-[145px] relative top-[40px] left-[47px] "
+      :src="pimg"
     />
     <p class="text1 text-[12px] relative top-[60px] left-[20px]">Hodo Foods</p>
-    <p class="text2 relative top-[60px] left-[20px] w-[250px] h-2">
+    <p class="text2 relative top-[60px] left-[20px] w-[210px] h-2">
       {{ pdetail }}
     </p>
     <div class="relative left-[20px] top-[90px] flex row items-center gap-1">
@@ -68,7 +68,7 @@ library.add(fas);
 export default {
   name: "AllProduct",
   props: {
-    pImg: String,
+    pimg: String,
     pbg: String,
     ptype: String,
     pdetail: String,
@@ -107,9 +107,7 @@ export default {
   font-size: 12px;
   color: #7e7e7e;
 }
-.pLabel {
-  background-color: #3bb77e;
-}
+
 .text1 {
   color: #7e7e7e;
 }

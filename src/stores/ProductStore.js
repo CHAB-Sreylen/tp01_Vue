@@ -60,7 +60,7 @@ export const useProductStore = defineStore("product_store", {
         Img: "https://s3-alpha-sig.figma.com/img/aadc/a20d/2ca905cbdfec3bf306fbe70e1ca34a8a?Expires=1699833600&Signature=UdhxWsqWNaFPVYRQR2BywbacMhq8bf1IKHxb9JMgBGKERxpzcPVzDRfozFq2CHgeR62jUwhPApqUiNlRxTrK-p9xFYxLUJEnCBUK~KZefSygBebL~AU-~BJ7njpLqN4UAmwIN~sCH5ugWqUUfP2HRdENjAEFzCqdG9XfWyGCwinAoSs4Nlky8wPdWo2YFTgw~H0jKvF4axGlNJvj2awW4-7t2F6OMUaoo3bNdmnlJvOmNVChiXOPrx1x7W~46GwXlUGsrsHYdW4JWrpLRuwKOC1gFW72hPaj~yITFMn5k3GGsDRBEpo5Uc9KKRwm2IilvuJ-Eo-uok4WmwouNwxPuw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
         bg: "#FFF3FF",
         ItemName: "Orange",
-        Amount: "63 items",  
+        Amount: "63 items",
       },
     ],
     Banner: [
@@ -99,20 +99,62 @@ export const useProductStore = defineStore("product_store", {
       "Meats",
       "Vegetable",
     ],
-    AllProduct:[
+    AllProduct: [
       {
-        pImg:  "../assets/image/Mango.png",
-        pbg:"#FD6E6E" ,
+        p_img: "./src/assets/image/corn.png",
+        pbg: "#FD6E6E",
         ptype: "Hot",
         pdetail: "All Natural Italian-Style Chicken Meatballs",
       },
       {
-        pImg: "../assets/image/Mango.png",
-        pbg:"#FD6E6E" ,
-        ptype: "Hot",
-        pdetail: "All Natural Italian-Style Chicken Meatballs",
+        p_img: "./src/assets/image/orange.png",
+        pbg: "#FDC040",
+        ptype: "Sale",
+        pdetail: "Angie's Boomchickapop Sweet & Salty Kettle Corn",
+      },{
+        p_img: "./src/assets/image/chili.png",
+        pbg: "",
+        ptype: "",
+        pdetail: "Foster Farms Takeout Crispy Classic Buffalo Wings",
       },
-    ]
+      {
+        p_img: "./src/assets/image/lemon.png",
+        pbg: "",
+        ptype: "Hot",
+        pdetail: "Blue Diamond Almonds Lightly Salted Vegetables",
+      },
+      {
+        p_img: "./src/assets/image/Meat1.png",
+        pbg: "",
+        ptype: "",
+        pdetail: "Chobani Complete Vanilla Greek Yogurt",
+      },
+      {
+        p_img: "./src/assets/image/Meat2.png",
+        pbg: "#FDC040",
+        ptype: "Sale",
+        pdetail: "Canada Dry Ginger Ale - 2 L Bottle - 200ml - 400g",
+      },
+      {
+        p_img: "./src/assets/image/Meat3.png",
+        pbg: "",
+        ptype: "",
+        pdetail: "Encore Seafoods Stuffed Alaskan Salmon",
+      },
+      {
+        p_img: "./src/assets/image/Meat4.png",
+        pbg: "",
+        ptype: "",
+        pdetail: "Gorton's Beer Battered Fish Fillets with soft paper",
+      },
+      {
+        p_img: "./src/assets/image/Meat5.png",
+        pbg: "#FD6E6E",
+        ptype: "Hot",
+        pdetail: "Haagen-Dazs Caramel Cone Ice Cream Ketchup",
+      },
+    
+    ],
   }),
   getters: {
     doubleCount: (state) => state.count,
