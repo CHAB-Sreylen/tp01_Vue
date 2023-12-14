@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <img class="w-[740px] h-[500px]" src="../assets/image/cover.png" alt="">
+        <!-- <img class="w-[740px] h-[500px]" src="../assets/image/cover.png" alt=""> -->
     </div>
 </template>
 <style>
