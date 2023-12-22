@@ -155,6 +155,13 @@ export const useProductStore = defineStore("product_store", {
         pdetail: "Haagen-Dazs Caramel Cone Ice Cream Ketchup",
       },
     ],
+    NavItem:[
+      {
+        IconFront:"",
+        name:"Hot Deals",
+        IconBack:"",
+      },
+    ]
   }),
   getters: {
     doubleCount: (state) => state.count,

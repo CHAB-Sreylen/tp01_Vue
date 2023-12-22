@@ -27,9 +27,9 @@
               :icon="['fas', 'chevron-down']"
               class="w-[30px] h-2 mt-1"
             />
-            <div class="mt-1 opacity-50 text-[14px]">| Search for items</div>
+            <input class="mt-1 opacity-50 text-[14px]" placeholder="| Search for items">
           </div>
-          <font-awesome-icon icon="magnifying-glass" class="opacity-50" />
+          <button><font-awesome-icon icon="magnifying-glass" class="opacity-50" /></button>
         </div>
       </div>
       <div class="flex flex-row mr-3 mt-0">
