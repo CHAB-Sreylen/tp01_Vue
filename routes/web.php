@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +27,9 @@ Route::get('/', function () {
     }
     // return view('welcome');
 });
-Route::get('/categories',function(){
-    return 'get categories';
+// Route::get('/categories',function(){
+//     return 'get categories';
+// });
+Route::get('/categories',function(Request){
+    return "Get all categories";
 });

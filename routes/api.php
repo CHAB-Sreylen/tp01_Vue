@@ -17,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/categories',function(){
-        return 'get categories';
+Route::get('/categories',function(Request $request){
+        return "Get all categories";
+});
+Route::post('/categories',function(Request $request){
+    return 'Create 1 category';
+});
+Route::patch('/categories/{categoyId}',function(Request $request){
+    return 'Update 1 categoy';
+});
+Route::patch('/categories/{categoyId}',function(Request $request){
+    return "Delete 1 category";
 });
