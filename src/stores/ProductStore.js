@@ -155,10 +155,46 @@ export const useProductStore = defineStore("product_store", {
         pdetail: "Haagen-Dazs Caramel Cone Ice Cream Ketchup",
       },
     ],
-    NavItem:[
+    Nav_item:[
+      {
+        
+        IconFront:"uil-fire",
+        name:"Hot Deals",
+        IconBack:"uil-angle-down",
+      },
       {
         IconFront:"",
-        name:"Hot Deals",
+        name:"Home",
+        IconBack:"",
+      },
+      {
+        IconFront:"",
+        name:"Food",
+        IconBack:"uil-angle-down",
+      },
+      {
+        IconFront:"",
+        name:"Vegetables",
+        IconBack:"uil-angle-down",
+      },
+      {
+        IconFront:"",
+        name:"Drink",
+        IconBack:"",
+      },
+      {
+        IconFront:"",
+        name:"Cookies",
+        IconBack:"",
+      },
+      {
+        IconFront:"",
+        name:"Meat & Seafood",
+        IconBack:"uil-angle-down",
+      },
+      {
+        IconFront:"",
+        name:"Bakery",
         IconBack:"",
       },
     ]
