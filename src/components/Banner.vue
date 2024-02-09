@@ -1,11 +1,13 @@
 <template>
-  <div class="banner-box" :style="{ backgroundColor: bannerBg }">
-    <div>
-      <p class="text">{{ Title }}</p>
-      <Button class="btn" :btnBg="btnColor"></Button>
+  <RouterLink to="/ProductDetail">
+    <div class="banner-box" :style="{ backgroundColor: bannerBg }">
+      <div>
+        <p class="text">{{ Title }}</p>
+        <Button class="btn" :btnBg="btnColor"></Button>
+      </div>
+      <img class="image" :src="img" alt="" />
     </div>
-    <img class="image" :src="img" alt="" />
-  </div>
+  </RouterLink>
 </template>
 
 <script>
@@ -19,9 +21,8 @@ export default {
     bannerBg: String,
     img: String,
     Title: String,
-    btnColor: String
+    btnColor: String,
   },
-  
 };
 </script>
 

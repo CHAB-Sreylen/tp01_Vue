@@ -24,12 +24,22 @@
         </div>
       </div>
     </div>
+    <!-- <nav >
+      <RouterLink to="/about">
+        <Nav_item
+      v-for="i in Nav_item"
+      :IconFront="i.IconFront"
+      :name="i.name"
+      :IconBack="i.IconBack"
+      />
+      </RouterLink>
+    </nav> -->
     <Nav_item
       v-for="i in Nav_item"
       :IconFront="i.IconFront"
       :name="i.name"
       :IconBack="i.IconBack"
-    />
+      />
     <div>
       <div class="flex flex-row items-center">
         <div class="logo flex flex-row pr-[40px]">

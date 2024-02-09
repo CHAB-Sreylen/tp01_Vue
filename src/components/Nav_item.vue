@@ -1,9 +1,14 @@
 <template>
-  <div class="flex flex-row" >
-    <i class="mr-3" style="#3BB77E" :class="IconFront"></i>
-    <p class="mr-3">{{ name }}</p>
-    <i class="" :class="IconBack"></i>
-  </div>
+  <nav>
+    <RouterLink  to="/Categorie">
+      <div class="flex flex-row" >
+        <i class="mr-3" style="#3BB77E" :class="IconFront"></i>
+        <p class="mr-3">{{ name }}</p>
+        <i class="" :class="IconBack"></i>
+      </div>
+    </RouterLink>
+  </nav>
+  
 </template>
 
 <script>

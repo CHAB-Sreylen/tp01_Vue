@@ -9,12 +9,20 @@ import HomeViews from "../views/HomeView.vue";
       component:HomeViews,
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/Categorie',
+      name: 'Categorie',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-     // component: () => import('../views/AboutView.vue')
+     component: () => import('../views/Product.vue')
+    },
+    {
+      path: '/ProductDetail',
+      name: 'Product',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+     component: () => import('../views/Popular_product.vue')
     }
   ]
 })

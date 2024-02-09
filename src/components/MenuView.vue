@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="Container_Menu">
       <div class="Feature_Right">{{ Featured }}</div>
       <div class="Menu_bar">
@@ -75,4 +75,4 @@
     transform: translate(5px, 5px);
     cursor: pointer;
   } */
-  </style>
+  </style> -->
