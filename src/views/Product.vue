@@ -12,8 +12,8 @@
         Cake & Milk
       </p>
       <p
-        class="text-[20px] ml-[60px] mt-[10px]"
-        style="color: #7e7e7e; font-family: Quicksand"
+        class="text-[20px] ml-[60px] mt-[10px] font-400"
+        style="color: #7e7e7e; font-family: Quicksand "
       >
         Home > Categories > Cake & Milk
       </p>

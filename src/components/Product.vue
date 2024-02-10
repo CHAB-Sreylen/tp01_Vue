@@ -1,4 +1,5 @@
 <template>
+ <RouterLink to="/ProductDetail">
   <div
     class="box w-[298px] h-[402px] bg-white relativ rounded-[10px] border-solid border-2 relative"
     style="border-color: #bce3c9"
@@ -55,19 +56,22 @@
       <!-- </div> -->
     </div>
   </div>
+ </RouterLink>
 </template>
 
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { RouterLink } from "vue-router";
 
 library.add(fas);
 
 export default {
   components: {
     FontAwesomeIcon,
-  },
+    RouterLink
+},
   methods: {
     increaseNum() {
       this.button = false;
