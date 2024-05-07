@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -30,7 +29,7 @@
 	</div>
 
 	<!-- Header Section -->
-	<header class="header" >
+	<header class="header">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-4 col-md-3 order-2 order-sm-1">
@@ -58,7 +57,7 @@
 				<ul class="nav__menu">
 					<li><a href="./index.html">Home</a></li>
 					<li><a href="./about.html">About</a></li>
-					<li><a href="/gallery">Gallery</a></li>
+					<li><a href="/gallery" class="menu--active">Gallery</a></li>
 					<li><a href="./blog.html">Blog</a>
 						<ul class="sub__menu">
 							<li><a href="./blog-single.html">Blog Single</a></li>
@@ -71,18 +70,88 @@
 	</header>
 	<!-- Header Section end -->
 
-    <div class="container-fluid d-flex justify-content-center p-5">
-        <form action="/Upload" method="POST" enctype="multipart/form-data" class="form">
-            @csrf
-            <input type="file" name="image" id="upload" >
-            <button type="submit" class="btn btn-success">Submit</button>
+	<!-- About Page -->
+	<div class="gallery__page">
+		<div class="gallery__warp">
+			<div class="row">
+                @foreach ($data as $image )
 
-        </form>
-    </div>
+                    <?php $image->path = 'http://127.0.0.1:9000/gallery//'.$image->path ?>
 
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a class="gallery__item fresco" href="{{$image->path}}" data-fresco-group="gallery">
+                            <img src="{{$image->path}}" alt="">
+                        </a>
+                    </div>
+                @endforeach
+
+				{{-- <div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/1.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/1.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/2.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/2.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/3.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/3.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/4.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/4.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/5.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/5.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/6.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/6.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/7.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/7.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/8.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/8.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/9.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/9.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/10.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/10.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/11.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/11.jpg" alt="">
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<a class="gallery__item fresco" href="img/gallery/12.jpg" data-fresco-group="gallery">
+						<img src="img/gallery/12.jpg" alt="">
+					</a>
+				</div> --}}
+			</div>
+		</div>
+	</div>
+	<!-- About Page end -->
 
 	<!-- Footer Section -->
-	<footer class="footer__section" style="margin-top: 40vh ">
+	<footer class="footer__section">
 		<div class="container">
 			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 			<div class="footer__copyright__text">
