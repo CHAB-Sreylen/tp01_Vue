@@ -1,16 +1,13 @@
 import { expect, test } from '@playwright/test';
 
+import { login } from './createfunctionlogin';
 //Feature CRUD 
 //4. To test successful create new task 
-test.skip('check if user can create new task ', async ({ page }) => {
+test ('check if user can create new task ', async ({ page }) => {
+
+    await login(page,"len@gmail.com","12345678");
 
     await page.goto('http://127.0.0.1:8000/tasks/create');
-
-    await page.getByLabel("E-Mail Address").fill("len@gmail.com");
-
-    await page.getByLabel("Password").fill("12345678");
-
-    await page.getByRole("button",{name:"Login"}).click();
 
     await page.getByRole("button",{name:"Tasks"}).click();
 
@@ -29,17 +26,11 @@ test.skip('check if user can create new task ', async ({ page }) => {
 });
 
 //5. To test edit task without checking completed box 
-test.skip('check if task can edit without checking completed box',async({page})=>{
+test ('check if task can edit without checking completed box',async({page})=>{
 
     //1. Navigate to http://127.0.0.1:8000/tasks
 
-    await page.goto('http://127.0.0.1:8000/tasks');
-
-    await page.getByLabel("E-Mail Address").fill("len@gmail.com");
-
-    await page.getByLabel("Password").fill("12345678");
-
-    await page.getByRole("button",{name:"Login"}).click();
+    await login(page,"len@gmail.com","12345678");
 
     await page.goto('http://127.0.0.1:8000/tasks');
 
@@ -67,24 +58,15 @@ test.skip('check if task can edit without checking completed box',async({page})=
 
 test ('check successful deleted task ',async({page})=>{
 
+    await login(page,"len@gmail.com","12345678");
+
     await page.goto('http://127.0.0.1:8000/tasks');
-
-    await page.getByLabel("E-Mail Address").fill("len@gmail.com");
-
-    await page.getByLabel("Password").fill("12345678");
-
-    await page.getByRole("button",{name:"Login"}).click();
 
     await page.locator('.fa.fa-pencil').first().click();
 
     await page.locator('.fa.fa-trash').click();
 
     await expect(page.getByText("Task Deleted")).toBeVisible();
-
-
-    
-
-
 
 
 

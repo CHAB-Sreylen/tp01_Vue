@@ -1,10 +1,10 @@
 
-import { test, expect } from '@playwright/test';
-
+import { test,Page,expect } from '@playwright/test';
+import { login } from './createfunctionlogin';
 //  Feature Authenication 
 // 1. To register a new user on the web apllication 
 
-test.skip('check if we can register new user', async ({ page }) => {
+test ('check if we can register new user', async ({ page }) => {
 
     //1. Visit localhost 8000
 
@@ -12,15 +12,14 @@ test.skip('check if we can register new user', async ({ page }) => {
 
     // 2. Click button register
 
-    // await page.getByRole("link", { name:"Register"}).click();
 
     await page.getByText("Register").click();
 
     //3. Fill in: 
 
-    await page.getByLabel("Name").fill("len");
+    await page.getByLabel("Name").fill("Sok");
 
-    await page.getByLabel("E-Mail Address").fill("len@gmail.com");
+    await page.getByLabel("E-Mail Address").fill("sok@gmail.com");
 
     await page.getByLabel("Password",{exact:true}).fill("12345678");
 
@@ -60,21 +59,17 @@ test ('check if we can login successfuly',async({page}) => {
 
 //3. To test logged out user
 
-test.skip ('check if user can logged out',async({page})=>{
+test ('check if user can logged out',async({page})=>{
 
     //1. Navigate to the registeration page  http://127.0.0.1:8000/login 
 
-    await page.goto('http://127.0.0.1:8000/login');
+       await page.goto('http://127.0.0.1:8000/login');
 
     //2. Page will redirect to login: fill in the email, fill in the email, click on button login 
 
-    await expect(page.locator(".panel-heading")).toBeVisible();
+       await expect(page.locator(".panel-heading")).toBeVisible();
 
-    await page.getByLabel("E-Mail Address").fill("len@gmail.com");
-
-    await page.getByLabel("Password").fill("12345678");
-
-    await page.getByRole("button",{name:"Login"}).click();
+       await login(page,"len@gmail.com","12345678");
 
     await expect(page.getByText("You are logged in!")).toBeVisible();
 
@@ -89,3 +84,5 @@ test.skip ('check if user can logged out',async({page})=>{
     await expect(page.getByText("Your Application's Landing Page.")).toBeVisible();
 
 });
+
+
